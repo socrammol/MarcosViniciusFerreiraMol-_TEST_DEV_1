@@ -1,6 +1,6 @@
 ---
 grails:
-    profile: web
+    profile: rest-api
     codegen:
         defaultPackage: backend
     gorm:

@@ -125,4 +125,4 @@ PS: You can find this test at **/frontend/cypress/integration/unique_test.js**
 Thank you for your time !
 **Don't forget** to PUSH all your work into the repository you created, on branch MASTER, and send the mail with the link when you are done !
 
-Best regards and good luck !# MarcosViniciusFerreiraMol-_TEST_DEV_1
+Best regards and good luck !
