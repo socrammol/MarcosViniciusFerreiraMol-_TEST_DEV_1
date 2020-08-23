@@ -15,8 +15,10 @@ class BootStrap {
         Company nissan = companyService.save('Nissan', 'veiculos').save()
         Company Ford = companyService.save('Ford', 'veiculos').save()
         Company microsoft = companyService.save('Microsoft', 'sistemas').save()
-        data = LocalDateTime.of(2020, 01, 05, 01, 01, 01)
-        salvaStock(data, nissan, Ford, microsoft)
+       // data = LocalDateTime.of(2020, 01, 05, 01, 01, 01)
+        int totalDias = 2;
+        data = LocalDateTime.now().minusDays(totalDias);
+        salvaStock(totalDias,data, nissan, Ford, microsoft)
 
     }
 
@@ -24,9 +26,9 @@ class BootStrap {
     def destroy = {
     }
 
-    def void salvaStock(LocalDateTime localDateTime, Company company1, Company company2, Company company3) {
+    def void salvaStock(int totalDias,LocalDateTime localDateTime, Company company1, Company company2, Company company3) {
         LocalDateTime dataFinal = data;
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < totalDias; i++) {
             for (int j = 0; j <= 8; j++) {
                 while (dataFinal.getHour() < 10 || dataFinal.getHour() > 18 && dataFinal.getMinute() > 0) {
                     dataFinal = dataFinal.plusHours(1);
