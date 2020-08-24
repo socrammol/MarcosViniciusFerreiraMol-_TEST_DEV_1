@@ -35,9 +35,9 @@ class BootStrap {
                 }
                 if (dataFinal.getHour() >= 10 && dataFinal.getHour() <= 18) {
                     for (int k = 0; k <=59; k++) {
-                        Stock gerarStock1 = stockService.save(Math.random() * 100, dataFinal, company1)
-                        Stock gerarStock2 = stockService.save(Math.random() * 100, dataFinal, company2)
-                        Stock gerarStock3 = stockService.save(Math.random() * 100, dataFinal, company3)
+                        Stock gerarStock1 = stockService.save(Math.random() * 100, dataFinal, company1).save()
+                        Stock gerarStock2 = stockService.save(Math.random() * 100, dataFinal, company2).save()
+                        Stock gerarStock3 = stockService.save(Math.random() * 100, dataFinal, company3).save()
                         dataFinal = dataFinal.plusMinutes(1);
                     }
                 }
